@@ -1,0 +1,11 @@
+C:\Users\Greattech\Documents\Labs\obj\Debug\netcoreapp3.0\Labs.csprojAssemblyReference.cache
+C:\Users\Greattech\Documents\Labs\obj\Debug\netcoreapp3.0\Labs.AssemblyInfoInputs.cache
+C:\Users\Greattech\Documents\Labs\obj\Debug\netcoreapp3.0\Labs.AssemblyInfo.cs
+C:\Users\Greattech\Documents\Labs\bin\Debug\netcoreapp3.0\Labs.exe
+C:\Users\Greattech\Documents\Labs\bin\Debug\netcoreapp3.0\Labs.deps.json
+C:\Users\Greattech\Documents\Labs\bin\Debug\netcoreapp3.0\Labs.runtimeconfig.json
+C:\Users\Greattech\Documents\Labs\bin\Debug\netcoreapp3.0\Labs.runtimeconfig.dev.json
+C:\Users\Greattech\Documents\Labs\bin\Debug\netcoreapp3.0\Labs.dll
+C:\Users\Greattech\Documents\Labs\bin\Debug\netcoreapp3.0\Labs.pdb
+C:\Users\Greattech\Documents\Labs\obj\Debug\netcoreapp3.0\Labs.dll
+C:\Users\Greattech\Documents\Labs\obj\Debug\netcoreapp3.0\Labs.pdb
