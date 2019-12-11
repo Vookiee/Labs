@@ -1,0 +1,11 @@
+C:\Users\Greattech\Documents\Labs\Lab2\meny\bin\Debug\netcoreapp3.0\meny.exe
+C:\Users\Greattech\Documents\Labs\Lab2\meny\bin\Debug\netcoreapp3.0\meny.deps.json
+C:\Users\Greattech\Documents\Labs\Lab2\meny\bin\Debug\netcoreapp3.0\meny.runtimeconfig.json
+C:\Users\Greattech\Documents\Labs\Lab2\meny\bin\Debug\netcoreapp3.0\meny.runtimeconfig.dev.json
+C:\Users\Greattech\Documents\Labs\Lab2\meny\bin\Debug\netcoreapp3.0\meny.dll
+C:\Users\Greattech\Documents\Labs\Lab2\meny\bin\Debug\netcoreapp3.0\meny.pdb
+C:\Users\Greattech\Documents\Labs\Lab2\meny\obj\Debug\netcoreapp3.0\meny.csprojAssemblyReference.cache
+C:\Users\Greattech\Documents\Labs\Lab2\meny\obj\Debug\netcoreapp3.0\meny.AssemblyInfoInputs.cache
+C:\Users\Greattech\Documents\Labs\Lab2\meny\obj\Debug\netcoreapp3.0\meny.AssemblyInfo.cs
+C:\Users\Greattech\Documents\Labs\Lab2\meny\obj\Debug\netcoreapp3.0\meny.dll
+C:\Users\Greattech\Documents\Labs\Lab2\meny\obj\Debug\netcoreapp3.0\meny.pdb
