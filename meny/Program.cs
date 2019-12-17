@@ -1,117 +1,189 @@
 ﻿using System;
-
 namespace meny
 {
     class Program
     {
+
         static void Main(string[] args)
         {
+
             // Här skapar vi en meny för användaren
             bool visaMeny = true;
             while (visaMeny)
             {
                 visaMeny = mainMeny();
             }
-            
+
         }
-        public static bool mainMeny ()
+        public static bool mainMeny()
         {
-            Console.Clear();
             Console.WriteLine("Välj ett alternativ:");
             Console.WriteLine("1. Multiplikationstabell ");
             Console.WriteLine("2. Lite matte");
-            Console.WriteLine("3. ");
-            Console.WriteLine("4. ");
-            Console.WriteLine("5. exit");
+            Console.WriteLine("3. Random nummer");
+            Console.WriteLine("4. Skapa din person");
+            Console.WriteLine("5. Exit");
             Console.Write("\r\nDitt alternativ: ");
 
-            switch (Console.ReadLine()){
+            switch (Console.ReadLine())
+            {
                 case "1":
                     tabell();
+                    tillbaka();
                     return false;
                 case "2":
                     matte();
+                    tillbaka();
                     return false;
                 case "3":
-                    return true;
+                    rng();
+                    tillbaka();
+                    return false;
                 case "4":
-                    return true;
+                    person();
+                    tillbaka();
+                    return false;
                 case "5":
-                    return false;        
+                    return false;
                 default:
-                return true;
+                    return true;
 
             }
         }
-        static void tabell (){
-            for (int y = 1; y <=9; y++){
+        //här skapar vi multiplikationstabellen    
+        static void tabell()
+        {
+            for (int y = 1; y <= 9; y++)
+            {
 
-                Console.WriteLine(y +":ans tabell");
-                
-                for (int x = 1; x <=9; x++){
-                    Console.WriteLine(y + " x " + x + " = " + y*x);
+                Console.WriteLine(y + ":ans tabell ");
+
+                for (int x = 1; x <= 9; x++)
+                {
+                    Console.WriteLine(y + " x " + x + " = " + y * x);
                 }
                 Console.WriteLine();
             }
 
         }
-        public void tillbaka() {
-        Console.WriteLine("Vill du återgå till menyn? Programmet kommer avslutas om du svarar nej. (JA/NEJ)");
+        //Skapar en tillbaka alternativ för användaren
+        static void tillbaka()
+        {
+            Console.WriteLine("Vill du återgå till menyn?(JA/NEJ)");
             string svar = "ja";
             svar = Console.ReadLine();
             svar = svar.ToLower();
 
-            if(svar == "ja")
+            if (svar == "ja")
             {
                 mainMeny();
             }
-     }
-        static void matte(){
+        }
+        //
+        static void rng()
+        {
+            int storlek;
+            Console.Write("Hur många tal vill du slumpmässa: ");
+            storlek = Int32.Parse(Console.ReadLine());
+            double[] tal = new double[storlek];
+
+            Random rng = new Random();
+            for (int i = 0; i < storlek; i++)
+            {
+                tal[i] = rng.Next(1, 1000);
+                Console.WriteLine(tal[i] + " ");
+            }
+            Console.Write("Här är dina slumpmässade tal sorterad: ");
+            Array.Sort(tal);
+
+            foreach (int value in tal)
+            {
+                Console.Write(value + " ");
+            }
+            Console.WriteLine("\n");
+        }
+        static void matte()
+        {
             int storlek;
 
             Console.WriteLine("Hur många tal vill du använda?");
             storlek = Int32.Parse(Console.ReadLine());
             double[] tal = new double[storlek];
             Console.WriteLine("Skriv in dina tal:");
-            for ( int i=0;i<tal.Length;i++){
-                tal[i]=double.Parse(Console.ReadLine());
+            for (int i = 0; i < tal.Length; i++)
+            {
+                tal[i] = double.Parse(Console.ReadLine());
             }
             Console.Write("Dina tal är: ");
-            for(int i=0;i<tal.Length;i++){
+            for (int i = 0; i < tal.Length; i++)
+            {
                 Console.Write("{0} ", tal[i]);
             }
             double sum = 0;
-            for (int i =0; i<tal.Length;i++){
-                sum +=tal[i];
+            for (int i = 0; i < tal.Length; i++)
+            {
+                sum += tal[i];
             }
             Console.WriteLine("\nSumman av talen är: {0:##}", sum);
             double medel = 0;
-            for(int i=0;i<tal.Length;i++){
-                medel+=tal[i]/tal.Length;
+            for (int i = 0; i < tal.Length; i++)
+            {
+                medel += tal[i] / tal.Length;
             }
             Console.WriteLine("Medelvärdet av talen är: {0:##}", medel);
 
             double min = tal[0];
-            for(int i=0;i<tal.Length;i++)
+            for (int i = 0; i < tal.Length; i++)
             {
-                if(tal[i] < min)
+                if (tal[i] < min)
                 {
                     min = tal[i];
                 }
             }
-            Console.WriteLine("Minsta värdet av dina tal är: "+min);
+            Console.WriteLine("Minsta värdet av dina tal är: {0}", min);
 
             double max = tal[0];
-            for(int i=0;i<tal.Length;i++)
+            for (int i = 0; i < tal.Length; i++)
             {
-                if(tal[i] > max)
+                if (tal[i] > max)
                 {
                     max = tal[i];
                 }
             }
             Console.WriteLine("Största värdet av dina tal är: {0} ", max);
+
+
+        }
         
-            
+
+        public static void person()
+        {
+            int storlek;
+            Console.WriteLine("Hur många personer vill du skriva in?");
+            storlek = Int32.Parse(Console.ReadLine());
+            Person[] skapa = new Person[storlek];
+
+            for (int i = 0; i < skapa.Length; i++)
+            {
+                Person p = new Person();
+                Console.Write("Vad heter personen? ");
+                p.name = Console.ReadLine();
+                Console.Write("Vilken kön har {0}: ", p.name);
+                p.SetGender(Console.ReadLine());
+                Console.Write("Skriv in ögonfärgen på {0}: ", p.name);
+                p.eyeColor = Console.ReadLine();
+                Console.Write("Skriv in hårfärg på {0}: ", p.name);
+                p.SetHairColor(Console.ReadLine());
+                Console.Write("Skriv in längden på håret för {0}(cm): ", p.name);
+                p.SetHairLength(double.Parse(Console.ReadLine()));
+                Console.WriteLine("Skriv in födelsedagen på {0}(MM/dd/yyyy): ", p.name);
+                p.birthday = DateTime.Parse(Console.ReadLine());
+                skapa[i]=p;
+
+            }
+            foreach(Person v in skapa){
+                Console.WriteLine(v.ToString());
+            }
         }
     }
 }
